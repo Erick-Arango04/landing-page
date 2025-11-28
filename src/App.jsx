@@ -1,8 +1,30 @@
+import { useState, useEffect } from 'react'
 import GlassCard from './components/GlassCard'
 import MockupCard from './components/MockupCard'
 import FloatingElement from './components/FloatingElement'
+import DiscountPopup from './components/DiscountPopup'
 
 function App() {
+  const [showDiscountPopup, setShowDiscountPopup] = useState(false)
+
+  // Timer para mostrar popup después de 10 segundos
+  useEffect(() => {
+    const hasSeenPopup = localStorage.getItem('discountPopupSeen')
+
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setShowDiscountPopup(true)
+      }, 10000)
+
+      return () => clearTimeout(timer)
+    }
+  }, [])
+
+  // Handler para cerrar popup
+  const handleClosePopup = () => {
+    setShowDiscountPopup(false)
+    localStorage.setItem('discountPopupSeen', 'true')
+  }
 
   const openCalendly = () => {
     if (window.Calendly) {
@@ -378,6 +400,16 @@ function App() {
           </button>
         </div>
       </div>
+
+      {/* Popup de Descuento */}
+      <DiscountPopup
+        isVisible={showDiscountPopup}
+        onClose={handleClosePopup}
+        discount="$100"
+        heading="¿Listo para ahorrar tiempo y horas de trabajo?"
+        subtext="Conmigo lo puedes logar. 😉"
+        description="Copia el código de este anuncio y compártelo durante tu sesión para activar tu descuento exclusivo."
+      />
 
     </div>
   )
