@@ -13,7 +13,7 @@ function DiscountPopup({
   discount = "$100",
   heading = "¿Listo para ahorrar tiempo y horas de trabajo?",
   subtext = "Conmigo lo puedes lograr. 😉",
-  description = "Copia el código de este anuncio y compártelo durante tu sesión para activar tu descuento exclusivo."
+  description = "Copia el código de este anuncio y compártelo durante tu sesión para activar tu descuento exclusivo en la inscripción del curso."
 }) {
   const [copied, setCopied] = useState(false)
   const [uniqueCode, setUniqueCode] = useState('')
@@ -39,7 +39,11 @@ function DiscountPopup({
       // Guardar código en localStorage solo cuando se copia
       localStorage.setItem('userDiscountCode', uniqueCode)
       setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      // Cerrar el modal después de 1 segundo
+      setTimeout(() => {
+        setCopied(false)
+        onClose()
+      }, 1000)
     } catch (err) {
       console.error('Failed to copy:', err)
     }

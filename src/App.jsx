@@ -406,7 +406,7 @@ function App() {
         discount="$100"
         heading="¿Listo para ahorrar tiempo y horas de trabajo?"
         subtext="Conmigo lo puedes lograr. 😉"
-        description="Copia el código de este anuncio y compártelo durante tu sesión para activar tu descuento exclusivo."
+        description="Copia el código de este anuncio y compártelo durante tu sesión para activar tu descuento exclusivo en la inscripción del curso."
       />
 
     </div>
