@@ -87,7 +87,7 @@ function App() {
               </div>
 
               <p className="text-base sm:text-lg lg:text-2xl text-gray-600 max-w-2xl leading-relaxed">
-                Quiero mostrarte en vivo cómo automatizar tareas repetitivas de tu trabajo usando IA. ejemplo real Responder correos en 30 segundos
+                Quiero mostrarte en vivo cómo automatizar tareas repetitivas de tu trabajo usando IA
               </p>
 
               <div className="hidden lg:flex flex-col sm:flex-row gap-4 pt-6 sm:pt-4">
@@ -95,7 +95,7 @@ function App() {
                   onClick={openCalendly}
                   className="bg-primary hover:bg-blue-700 text-white font-bold text-base sm:text-lg px-10 py-5 sm:px-8 sm:py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto"
                 >
-                  Agenda 15 Minutos
+                  Agenda 15 Minutos Gratis
                 </button>
               </div>
             </div>
@@ -111,7 +111,7 @@ function App() {
               />
 
               <MockupCard
-                title="IA Assistant"
+                title="Asistencia con IA"
                 subtitle="Analiza y genera reportes"
                 icon="🤖"
                 stats={{ value: "3hrs", label: "Ahorro diario" }}
@@ -155,7 +155,7 @@ function App() {
               },
               {
                 number: "3",
-                description: "Buscamos juntos como cambiar tu forma de trabajar",
+                description: "Buscamos juntos cómo cambiar tu forma de trabajar",
                 subdescription: "",
                 icon: "🎯"
               },
@@ -245,7 +245,7 @@ function App() {
                 {[
                   'Trabajas en áreas administrativas, operativas o de soporte interno',
                   'Necesitas hacer más en menos tiempo sin perder calidad',
-                  'Quieres dedicar tu tiempo a tareas de mayor valor, no a procesos manuales.',
+                  'Quieres dedicar tu tiempo a tareas de mayor valor, no a procesos manuales',
                   'Has escuchado de IA y quieres aplicarla a tu trabajo sin complicaciones'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start text-lg">
@@ -258,13 +258,12 @@ function App() {
               {/* Card de perfil - Visible solo en móvil (< 768px) */}
               <div className="md:hidden mb-8">
                 <GlassCard className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-3xl">
+                  <div className="flex items-start mb-6">
+                    <div className="w-16 h-16 flex-shrink-0 bg-primary/20 rounded-full flex items-center justify-center text-3xl">
                       💼
                     </div>
-                    <div className="ml-4">
-                      <div className="font-bold text-gray-dark text-lg">Perfil Ideal</div>
-                      <div className="text-gray-medium text-sm">Profesional Administrativo</div>
+                    <div className="ml-4 flex-1">
+                      <div className="text-gray-dark text-lg font-semibold leading-snug">Profesional que gestiona procesos diarios dentro de entornos digitales</div>
                     </div>
                   </div>
 
@@ -315,13 +314,12 @@ function App() {
             <div className="hidden md:flex justify-end">
               <div className="w-full max-w-md">
                 <GlassCard className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-3xl">
+                  <div className="flex items-start mb-6">
+                    <div className="w-16 h-16 flex-shrink-0 bg-primary/20 rounded-full flex items-center justify-center text-3xl">
                       💼
                     </div>
-                    <div className="ml-4">
-                      <div className="font-bold text-gray-dark text-lg">Perfil Ideal</div>
-                      <div className="text-gray-medium text-sm">Profesional Administrativo</div>
+                    <div className="ml-4 flex-1">
+                      <div className="text-gray-dark text-lg font-semibold leading-snug">Profesional que gestiona procesos diarios dentro de entornos digitales</div>
                     </div>
                   </div>
 
@@ -396,7 +394,7 @@ function App() {
             onClick={openCalendly}
             className="bg-primary hover:bg-blue-700 text-white font-bold text-base px-6 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 w-full"
           >
-            Agenda 15 Minutos 📅
+            Agenda 15 Minutos Gratis 📅
           </button>
         </div>
       </div>
@@ -407,7 +405,7 @@ function App() {
         onClose={handleClosePopup}
         discount="$100"
         heading="¿Listo para ahorrar tiempo y horas de trabajo?"
-        subtext="Conmigo lo puedes logar. 😉"
+        subtext="Conmigo lo puedes lograr. 😉"
         description="Copia el código de este anuncio y compártelo durante tu sesión para activar tu descuento exclusivo."
       />
 
